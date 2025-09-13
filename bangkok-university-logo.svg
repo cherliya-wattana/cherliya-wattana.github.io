@@ -1,0 +1,7 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bangkok University Logo -->
+  <circle cx="30" cy="30" r="28" fill="#1e3a8a" stroke="#ffffff" stroke-width="2"/>
+  <text x="30" y="20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">BU</text>
+  <text x="30" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="6">BANGKOK</text>
+  <text x="30" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="6">UNIVERSITY</text>
+</svg>
