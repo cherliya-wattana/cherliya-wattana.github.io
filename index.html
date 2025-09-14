@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cherliya Wattanaissararat - Front-End Developer Portfolio">
+    <meta name="keywords" content="Cherliya, Wattanaissararat, Front-End, Developer, Portfolio, Web Development">
+    <meta name="author" content="Cherliya Wattanaissararat">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cherliya Wattanaissararat - Portfolio">
+    <meta property="og:description" content="Front-End Developer Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+    <meta property="og:image" content="assets/profile.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cherliya Wattanaissararat - Portfolio">
+    <meta name="twitter:description" content="Front-End Developer Portfolio">
+    <meta name="twitter:image" content="assets/profile.jpg">
+    
+    <title>Cherliya Wattanaissararat - Portfolio</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="portt.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">
+                    <svg class="logo-image" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Saturn planet -->
+                        <circle cx="50" cy="50" r="20" fill="url(#planetGradient)"/>
+                        <!-- Saturn rings -->
+                        <ellipse cx="50" cy="50" rx="35" ry="8" fill="none" stroke="#ff69b4" stroke-width="2" opacity="0.8"/>
+                        <ellipse cx="50" cy="50" rx="30" ry="6" fill="none" opacity="0.6"/>
+                        <ellipse cx="50" cy="50" rx="25" ry="4" fill="none" stroke="#ff69b4" stroke-width="1" opacity="0.4"/>
+                        <!-- Gradient definitions -->
+                        <defs>
+                            <radialGradient id="planetGradient" cx="0.3" cy="0.3">
+                                <stop offset="0%" stop-color="#ff69b4"/>
+                                <stop offset="50%" stop-color="#9b5cff"/>
+                                <stop offset="100%" stop-color="#7c3aed"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">Cherliya.watt</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#activities" class="nav-link">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particles"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <img src="CXF02849.jpg" alt="Cherliya Wattanaissararat Profile" loading="lazy">
+                    <div class="profile-glow"></div>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="typing-text">Cherliya Wattanaissararat</span>
+                </h1>
+                
+                <p class="hero-subtitle">Bangkok University ,Bachelor Degree</p>
+                    <p class="hero-subtitle">Faculty of Information Technology & Innovation , Major of Computer Science (GPA : 3.40)</p>
+                <p class="hero-subtitle">Aspiring Data Analyst , Data Science , Developer , UX/UI designer , Business Analyst</p>
+                <div class="skill-chips">
+                    <span class="skill-chip">Programming</span>
+                    <span class="skill-chip">Data</span>
+                    <span class="skill-chip">Analyst</span>
+                    <span class="skill-chip">Business</span>
+                    <span class="skill-chip">UX/UI</span>
+                    <span class="skill-chip">ML</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/cherliya-wattanaissararat-2b27a7374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" data-tooltip="LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/cherliya-wattana" class="social-link" data-tooltip="GitHub" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/18Ax9aUD7y/" class="social-link" data-tooltip="Facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+                
+                <a href="#projects" class="cta-button">
+                    <span>View Projects</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+                
+                <a href="#skills" class="cta-button">
+                    <span>My Skills</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="../photo/CXF08092.jpg" alt="About Cherliya" loading="lazy">
+                    <div class="small-images">
+                        <div class="small-image">
+                            <img src="../photo/Sport2.jpg" alt="Small Image 1" loading="lazy">
+                        </div>
+                        <div class="small-image">
+                            <img src="../photo/1.png" alt="Small Image 2" loading="lazy">
+                        </div>
+                        <div class="small-image">
+                            <img src="../photo/Screenshot 2025-09-12 005719.png" alt="Small Image 3" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <div class="objective">
+                        <h3>Objective</h3>
+                        <p>Determined to build a career in Data Science and Data Analytics, advancing into a data expert by applying advanced analytics and Machine Learning to drive long-term innovation, maximize business growth, enhance operational efficiency, and deliver measurable customer satisfaction. Committed to continuously developing UX/UI design skills to create intuitive, accessible, and modern user experiences that generate value for both users and the organization.</p>
+                    </div>
+                    
+                    <div class="personal-info">
+                        <h3>Personal Information</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-user"></i>
+                                <span>Name : Cherliya Wattanaissararat (Baifern)</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-birthday-cake"></i>
+                                <span>Birthday : 18 May 2004</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Khlong Luang , Pathum Thani</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:cherliya.watt@gmail.com" style="color: inherit; text-decoration: none;">cherliya.watt@gmail.com</a>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:0626293656" style="color: inherit; text-decoration: none;">062-629-3656</a>
+                            </div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="education">
+                <h3>Education</h3>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-marker"></div>
+                        <div class="education-content">
+                            <div class="education-text">
+                                <div class="education-year">2022-Present</div>
+                                <h4>Bangkok University</h4>
+                                <p>Bachelor Degree</p>
+                                <p>Information Technology & Innovation</p>
+                                <p>Major of Computer Science</p>
+                                <p>(GPA : 3.40)</p>
+                            </div>
+                            <div class="education-logo">
+                                <img src="photo/channels4_profile.jpg" alt="Profile Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-marker"></div>
+                        <div class="education-content">
+                            <div class="education-logo-left">
+                                <img src="photo/images.jpg" alt="School Logo">
+                            </div>
+                            <div class="education-year">2019-2021</div>
+                            <h4>Sainampeung School</h4>
+                            <p>Senior High School</p>
+                            <p>Japanese & English Program</p>
+                             <p>(GPAX : 3.50)</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-marker"></div>
+                        <div class="education-content">
+                            <div class="education-logo">
+                                <img src="photo/images.jpg" alt="School Logo">
+                            </div>
+                            <div class="education-year">2015-2018</div>
+                            <h4>Sainampeung School</h4>
+                            <p>Junior High School</p>
+                            <p>Mini English Program</p>
+                             <p>(GPAX : 3.20)</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3 class="skill-header" onclick="toggleSkillCategory(this)">
+                        <i class="fas fa-code"></i> Programming
+                        <i class="fas fa-chevron-down skill-arrow"></i>
+                    </h3>
+                    <div class="skill-items collapsed">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                                <span class="skill-level">Beginner</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Dart</span>
+                                <span class="skill-level">Beginner</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-header" onclick="toggleSkillCategory(this)">
+                        <i class="fas fa-chart-line"></i> Data Analyst
+                        <i class="fas fa-chevron-down skill-arrow"></i>
+                    </h3>
+                    <div class="skill-items collapsed">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-brain"></i>
+                                <span>Analytical Thinking & Problem-Solving</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-search"></i>
+                                <span>Data Interpretation</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-broom"></i>
+                                <span>Data Cleaning & Preparation</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Data Visualization</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-robot"></i>
+                                <span>Data Automation</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-calculator"></i>
+                                <span>Basic Statistics</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-header" onclick="toggleSkillCategory(this)">
+                        <i class="fas fa-brain"></i> Data Science
+                        <i class="fas fa-chevron-down skill-arrow"></i>
+                    </h3>
+                    <div class="skill-items collapsed">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-robot"></i>
+                                <span>Machine Learning & Predictive Modeling</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-tools"></i>
+                                <span>Data Wrangling & Preprocessing</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Statistical Analysis & Mathematics</span>
+                                <span class="skill-level">Beginner</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-language"></i>
+                                <span>Tokenization (for NLP)</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-th"></i>
+                                <span>Tensors & Matrix Operations</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Model Deployment & Automation</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="50"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-header" onclick="toggleSkillCategory(this)">
+                        <i class="fas fa-palette"></i> UX/UI
+                        <i class="fas fa-chevron-down skill-arrow"></i>
+                    </h3>
+                    <div class="skill-items collapsed">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-search"></i>
+                                <span>User Research & Testing</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-drafting-compass"></i>
+                                <span>Wireframing & Prototyping</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-sitemap"></i>
+                                <span>Interaction Design & Information Architecture</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-paint-brush"></i>
+                                <span>Visual Design</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Design Systems & Style Guides</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-route"></i>
+                                <span>User Flows & Journey Mapping</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-tools"></i>
+                                <span>Tools Proficiency</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-header" onclick="toggleSkillCategory(this)">
+                        <i class="fas fa-briefcase"></i> Business Analyst
+                        <i class="fas fa-chevron-down skill-arrow"></i>
+                    </h3>
+                    <div class="skill-items collapsed">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-clipboard-list"></i>
+                                <span>Requirements Gathering & Documentation</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-cogs"></i>
+                                <span>Business Process Modeling & Improvement</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Data Analysis & Visualization</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-users"></i>
+                                <span>Stakeholder Communication & Collaboration</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-tools"></i>
+                                <span>Tools Proficiency</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-tasks"></i>
+                                <span>Project Management Fundamentals (Agile, Scrum, Waterfall)</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category soft-skills">
+                    <h3 class="skill-header" onclick="toggleSkillCategory(this)">
+                        <i class="fas fa-heart"></i> Soft Skills
+                        <i class="fas fa-chevron-down skill-arrow"></i>
+                    </h3>
+                    <div class="skill-items collapsed">
+                        <div class="soft-skills-grid">
+                            <div class="soft-skill-box">
+                                <i class="fas fa-comments"></i>
+                                <span>Communication & Team Collaboration</span>
+                            </div>
+                            <div class="soft-skill-box">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Problem Solving & Creative Thinking</span>
+                            </div>
+                            <div class="soft-skill-box">
+                                <i class="fas fa-search"></i>
+                                <span>Detail-Oriented</span>
+                            </div>
+                            <div class="soft-skill-box">
+                                <i class="fas fa-clock"></i>
+                                <span>Time Management</span>
+                            </div>
+                            <div class="soft-skill-box">
+                                <i class="fas fa-ear-listen"></i>
+                                <span>Active Listener</span>
+                            </div>
+                            <div class="soft-skill-box">
+                                <i class="fas fa-smile"></i>
+                                <span>Positive Attitude</span>
+                            </div>
+                            <div class="soft-skill-box">
+                                <i class="fas fa-sync-alt"></i>
+                                <span>Fast Adaptability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category tools-platforms">
+                    <h3 class="skill-header">
+                        <i class="fas fa-tools"></i> Tools & Platforms
+                    </h3>
+                    <div class="skill-items expanded">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fab fa-microsoft"></i>
+                                <span>VSCode</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Data Studio</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-database"></i>
+                                <span>DB Browser</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Lucidchart</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fab fa-google"></i>
+                                <span>Google Platforms</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Microsoft 365 (ALL)</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-video"></i>
+                                <span>Adobe Premiere Pro</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-paint-brush"></i>
+                                <span>Procreate</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-cut"></i>
+                                <span>CapCut</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="fas fa-palette"></i>
+                                <span>Canva</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-progress="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-images">
+                            <img src="photo/Ride.png" alt="Ride 'N' Guide 1" class="project-img active" loading="lazy">
+                            <img src="photo/44.png" alt="Ride 'N' Guide 3" class="project-img" loading="lazy">
+                            <img src="photo/33.png" alt="Ride 'N' Guide 4" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/cherliya-wattana" class="project-link" data-tooltip="GitHub" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.canva.com/design/DAGyvgYMpNA/bdP_q_QzwIV68fJ8i8mIIw/view?utm_content=DAGyvgYMpNA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1df1885e7d" class="project-link" data-tooltip="Live Demo" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Ride 'N' Guide (AI Travel Chatbot)</h3>
+                        <p class="project-description">Ride 'N' Guide is an AI-powered travel assistant that helps travelers plan trips more efficiently by recommending attractions, routes, weather, and expenses, reducing search time and making travel easier and more enjoyable.</p>
+                        <div class="project-tags">
+                            <span class="tag">AI Chatbot</span>
+                            <span class="tag">Flutter(Dart)</span>
+                            <span class="tag">API</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-images">
+                            <img src="photo/Record_Manage.png" alt="Activity Record Management System 1" class="project-img active" loading="lazy">
+                            <img src="photo/3.png" alt="Activity Record Management System 2" class="project-img" loading="lazy">
+                            <img src="photo/4.png" alt="Activity Record Management System 3" class="project-img" loading="lazy">
+                            <img src="photo/5.png" alt="Activity Record Management System 4" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/cherliya-wattana" class="project-link" data-tooltip="GitHub" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.figma.com/design/CaFLW2A5KjtmRFlCpDh5yk/Activity-Based-Employee-Engagement-System?node-id=9-7049&t=iZre1ZOtwpwKkNeX-1" class="project-link" data-tooltip="Live Demo" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Activity Record Management System</h3>
+                        <p class="project-description">Activity Record Management System is an internal platform with employee, organizer, and admin roles, offering registration, check-in, points, and rewards to streamline events, promote skill development, and enhance engagement.</p>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Android Studio</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-images">
+                            <img src="photo/56764.jpg" alt="Smart Aquarium 1" class="project-img active" loading="lazy">
+                            <img src="photo/Arduino.jpg" alt="Smart Aquarium 2" class="project-img" loading="lazy">
+                            <img src="photo/น่ารัก สีชอล์ค กระดาน ลายมือ งานนำเสนอ.png" alt="Smart Aquarium 3" class="project-img" loading="lazy">
+                            <img src="photo/56769.jpg" alt="Smart Aquarium 4" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/cherliya-wattana" class="project-link" data-tooltip="GitHub" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.canva.com/design/DAGyvuY1tk0/Ki73LQQep_N12PlgYhpV7A/view?utm_content=DAGyvuY1tk0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h51a486c8d3" class="project-link" data-tooltip="Live Demo" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Aquarium</h3>
+                        <p class="project-description">The "Smart Aquarium" is an Arduino-based system for real-time aquarium management, featuring temperature control, auto-feeding, water quality monitoring, and smartphone control with alerts and data analysis for efficient habitat optimization.</p>
+                        <div class="project-tags">
+                            <span class="tag">IOT</span>
+                            <span class="tag">smart aquarium</span>
+                            <span class="tag">Arduino</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-images">
+                            <img src="photo/Login.png" alt="BU Library 1" class="project-img active" loading="lazy">
+                            <img src="photo/จองห้อง.png" alt="BU Library 2" class="project-img" loading="lazy">
+                            <img src="photo/จองบอร์ดเกม_วิธีเล่น.png" alt="BU Library 3" class="project-img" loading="lazy">
+                            <img src="photo/Active.png" alt="BU Library 4" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/cherliya-wattana" class="project-link" data-tooltip="GitHub" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://pdf.ac/233NODSwH0" class="project-link" data-tooltip="Live Demo" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">BU Library</h3>
+                        <p class="project-description">"BU Library" is a reservation system for Bangkok University's Surath Osathanugrah Library that lets students book rooms and board games online with real-time status, tutorials, and booking history. Built with Object-Oriented Programming, it features a user-friendly interface and efficient front-end and back-end operations.</p>
+                        <div class="project-tags">
+                            <span class="tag">OOP</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">NetBeans</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-images">
+                            <img src="photo/Screenshot 2025-09-13 012246.png" alt="Hong Shop 1" class="project-img active" loading="lazy">
+                            <img src="photo/Screenshot 2025-09-13 012312.png" alt="Hong Shop 2" class="project-img" loading="lazy">
+                            <img src="photo/Screenshot 2025-09-13 012504.png" alt="Hong Shop 3" class="project-img" loading="lazy">
+                            <img src="photo/Screenshot 2025-09-13 012539.png" alt="Hong Shop 4" class="project-img" loading="lazy">
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/cherliya-wattana" class="project-link" data-tooltip="GitHub" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://pdf.ac/vpjZKGa9" class="project-link" data-tooltip="Live Demo" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Hong Shop</h3>
+                        <p class="project-description">"HongShop" is a pet food store management system integrating staff, inventory, membership, and online sales, with features like salary calculation, stock monitoring, promotions, and online payments to improve efficiency and reduce errors.</p>
+                        <div class="project-tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">management system</span>
+                            <span class="tag">Data</span>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+            </div>
+            
+            <!-- Name Change Documents Section -->
+            <div class="name-change-section">
+                <h3 class="subsection-title">Name and Surname Change Documents</h3>
+                <div class="name-change-grid">
+                    <div class="name-change-card" onclick="openImageModal('photo/firstname.png', 'Official Certificate of Name Change')">
+                        <img src="photo/firstname.png" alt="Official Certificate of Name Change" class="name-change-image">
+                        <div class="name-change-content">
+                            <h4 class="name-change-title">Official Certificate of Name Change</h4>
+                            <p class="name-change-date">9 February 2024</p>
+                            <p class="name-change-description">At Mueang Amnat Charoen District Office</p>
+                        </div>
+                    </div>
+                    
+                    <div class="name-change-card" onclick="openImageModal('photo/lastname.png', 'Official Certificate of Surname Registration Change')">
+                        <img src="photo/lastname.png" alt="Official Certificate of Surname Registration Change" class="name-change-image">
+                        <div class="name-change-content">
+                            <h4 class="name-change-title">Official Certificate of Surname Registration Change</h4>
+                            <p class="name-change-date">9 February 2024</p>
+                            <p class="name-change-description">At Mueang Amnat Charoen District Office</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Modal -->
+                <div id="imageModal" class="modal" onclick="closeImageModal()">
+                    <div class="modal-content" onclick="event.stopPropagation()">
+                        <span class="close" onclick="closeImageModal()">&times;</span>
+                        <img id="modalImage" class="modal-image" alt="">
+                        <div class="zoom-controls">
+                            <button onclick="zoomIn()">+</button>
+                            <button onclick="zoomOut()">-</button>
+                            <button onclick="resetZoom()">รีเซ็ต</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications Grid -->
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <img src="photo/Screenshot 2025-07-12 113254.png" alt="Screenshot 2025-07-12 113254" class="cert-image" onclick="openImageModal('photo/Screenshot 2025-07-12 113254.png', 'Screenshot 2025-07-12 113254')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">Oracle Fusion Cloud Application ERP Certified Foundations Associate</h3>
+                        <p class="cert-issuer">ORACLE</p>
+                        <p class="cert-date">15 May 2025</p>
+                        <p class="cert-description">Oracle Certified Foundations Associate</p>
+
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Screenshot 2025-07-12 113233.png" alt="Screenshot 2025-07-12 113233" class="cert-image" onclick="openImageModal('photo/Screenshot 2025-07-12 113233.png', 'Screenshot 2025-07-12 113233')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">Oracle Cloud Success Navigator Essentials</h3>
+                        <p class="cert-issuer">ORACLE</p>
+                        <p class="cert-date">15 May 2025</p>
+                        <p class="cert-description">Certificate of Completion</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Screenshot 2025-07-12 113206.png" alt="Screenshot 2025-07-12 113206" class="cert-image" onclick="openImageModal('photo/Screenshot 2025-07-12 113206.png', 'Screenshot 2025-07-12 113206')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">Oracle Fusion Cloud Application CX Certified Foundations Associate</h3>
+                        <p class="cert-issuer">ORACLE</p>
+                        <p class="cert-date">15 May 2025</p>
+                        <p class="cert-description">Oracle Certified Foundations Associate</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Screenshot 2025-07-12 113136.png" alt="Screenshot 2025-07-12 113136" class="cert-image" onclick="openImageModal('photo/Screenshot 2025-07-12 113136.png', 'Screenshot 2025-07-12 113136')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">Oracle Fusion Cloud Application SCM Certified Foundations Associate</h3>
+                        <p class="cert-issuer">ORACLE</p>
+                        <p class="cert-date">15 May 2025</p>
+                        <p class="cert-description">Oracle Certified Foundations Associate</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Screenshot 2025-07-12 113107.png" alt="Screenshot 2025-07-12 113107" class="cert-image" onclick="openImageModal('photo/Screenshot 2025-07-12 113107.png', 'Screenshot 2025-07-12 113107')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">SPEEXX B1.1 Certificate</h3>
+                        <p class="cert-issuer">SPEEXX</p>
+                        <p class="cert-date">9 November 2024</p>
+                        <p class="cert-description">The language training covered the level descriptions and learning goals as defined by the Common European Framework of Reference for Languages: Learning, Teaching, Assessment (CEFR).</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Cer1.png" alt="Certificate 1" class="cert-image" onclick="openImageModal('photo/Cer1.png', 'Certificate 1')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">TDGA Digital Literacy Certificate</h3>
+                        <p class="cert-issuer">DGA / TDGA</p>
+                        <p class="cert-date">21 July 2022</p>
+                        <p class="cert-description">Completed training through an online learning system in the subject of Digital Literacy.</p>
+
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Cer2.png" alt="Certificate 2" class="cert-image" onclick="openImageModal('photo/Cer2.png', 'Certificate 2')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">TDGA Cybersecurity Awareness Certificate</h3>
+                        <p class="cert-issuer">DGA / TDGA</p>
+                        <p class="cert-date">28 October 2023</p>
+                        <p class="cert-description">Completed training in Cybersecurity Awareness through an online learning platform.</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Cer3.png" alt="Certificate 3" class="cert-image" onclick="openImageModal('photo/Cer3.png', 'Certificate 3')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">Beginner's Guide to Investment Certificate</h3>
+                        <p class="cert-issuer">SET</p>
+                        <p class="cert-date">19 April 2023</p>
+                        <p class="cert-description">Completed the e-Learning course: Stock Investment for Beginners.</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Cer4.png" alt="Certificate 4" class="cert-image" onclick="openImageModal('photo/Cer4.png', 'Certificate 4')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">All About Investment Certificate</h3>
+                        <p class="cert-issuer">SET</p>
+                        <p class="cert-date">20 April 2023</p>
+                        <p class="cert-description">Completed the e-Learning course: All About Investment.</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Cer5.png" alt="Certificate 5" class="cert-image" onclick="openImageModal('photo/Cer5.png', 'Certificate 5')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">The Philosophy of Sufficiency Economy Certificate</h3>
+                        <p class="cert-issuer">SET</p>
+                        <p class="cert-date">20 April 2023</p>
+                        <p class="cert-description">Completed the e-Learning course: The Philosophy of Sufficiency Economy</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Cer6.png" alt="Certificate 6" class="cert-image" onclick="openImageModal('photo/Cer6.png', 'Certificate 6')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">Life Begins with Planning Certificate</h3>
+                        <p class="cert-issuer">SET</p>
+                        <p class="cert-date">20 April 2023</p>
+                        <p class="cert-description">Completed the e-Learning course: Life Begins with Planning</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <img src="photo/Cer7.png" alt="Certificate 7" class="cert-image" onclick="openImageModal('photo/Cer7.png', 'Certificate 7')">
+                    <div class="cert-content">
+                        <h3 class="cert-title">SET Mutual Fund Classroom The Series Certificate</h3>
+                        <p class="cert-issuer">SET</p>
+                        <p class="cert-date">20 April 2023</p>
+                        <p class="cert-description">Completed the e-Learning course: Mutual Fund Classroom The Series</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+            </div>
+            
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date">2025</div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">IT Support (4 Months)</h3>
+                        <h4 class="experience-company">Finnlution co.,ltd. / Part-Time</h4>
+                        <p class="experience-description">Responsible for updating field team data into the company system and providing IT support to staff when issues arise.</p>
+                        
+                        <h3 class="experience-title">Sales Staff (2 Weeks)</h3>
+                        <h4 class="experience-company">The 53rd National Book Fair at Queen Sirikit Center</h4>
+                        <p class="experience-description">Performed book sales and provided customer recommendations.</p>
+                        
+                        <h3 class="experience-title">Inventory Data Entry Clerk (2 Months)</h3>
+                        <h4 class="experience-company">Union Mall</h4>
+                        <p class="experience-description">Entered product data into the system upon stock replenishment.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2024</div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Tea Barista (6 Months)</h3>
+                        <h4 class="experience-company">Maru Cha</h4>
+                        <p class="experience-description">Prepared all beverages and managed the shop's daily accounts.</p>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Activities</h2>
+            </div>
+            
+            <div class="activities-grid">
+                <div class="activity-card" onclick="openActivityGallery(['photo/สื่อ (5).jpg', 'photo/สื่อ.jpg', 'photo/สื่อ (4).jpg', 'photo/สื่อ (3).jpg'], 'ITI First Meet 2025')">
+                    <div class="activity-images">
+                        <img src="photo/สื่อ (5).jpg" alt="Media 1" class="activity-image active">
+                        <img src="photo/สื่อ.jpg" alt="Media 2" class="activity-image">
+                        <img src="photo/สื่อ (4).jpg" alt="Media 3" class="activity-image">
+                        <img src="photo/สื่อ (3).jpg" alt="Media 4" class="activity-image">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-date">2025</div>
+                        <h3 class="activity-title">ITI First Meet 2025</h3>
+                        <p class="activity-description">Freshy Event of the Faculty of Information Technology and Innovation</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card" onclick="openActivityGallery(['photo/สื่อ (6).jpg', 'photo/สื่อ (7).jpg', 'photo/สื่อ (8).jpg'], 'Freshmen Orientation Event')">
+                    <div class="activity-images">
+                        <img src="photo/สื่อ (6).jpg" alt="Freshmen 1" class="activity-image active">
+                        <img src="photo/สื่อ (7).jpg" alt="Freshmen 2" class="activity-image">
+                        <img src="photo/สื่อ (8).jpg" alt="Freshmen 3" class="activity-image">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-date">2025</div>
+                        <h3 class="activity-title">Freshmen Orientation Event</h3>
+                        <p class="activity-description">Freshmen Orientation Event of the Faculty of Information Technology and Innovation</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card" onclick="openActivityGallery(['photo/Cheer2.jpg', 'photo/สื่อ (9).jpg', 'photo/สื่อ (10).jpg', 'photo/สื่อ (11).jpg', 'photo/สื่อ (12).jpg'], 'Cheer Day 2023')">
+                    <div class="activity-images">
+                        <img src="photo/Cheer2.jpg" alt="Cheer 1" class="activity-image active">
+                        <img src="photo/สื่อ (9).jpg" alt="Cheer 2" class="activity-image">
+                        <img src="photo/สื่อ (10).jpg" alt="Cheer 3" class="activity-image">
+                        <img src="photo/สื่อ (11).jpg" alt="Cheer 4" class="activity-image">
+                        <img src="photo/สื่อ (12).jpg" alt="Cheer 5" class="activity-image">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-date">2023</div>
+                        <h3 class="activity-title">Cheer Day 2023</h3>
+                        <p class="activity-description">Bangkok University Annual Cheerleading Day for All Faculties</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card" onclick="openActivityGallery(['photo/LINE_ALBUM_Web port_250710_82_edited_edited.jpg'], 'Open House Bangkok University')">
+                    <div class="activity-images">
+                        <img src="photo/LINE_ALBUM_Web port_250710_82_edited_edited.jpg" alt="Open House 1" class="activity-image active">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-date">2023</div>
+                        <h3 class="activity-title">Open House Bangkok University</h3>
+                        <p class="activity-description">Counseling Staff for High School Students Interested in the Faculty of Information Technology and Innovation</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card" onclick="openActivityGallery(['photo/Sport1.jpg', 'photo/Sport2.jpg', 'photo/Sport3.jpg', 'photo/CXF08447.jpg', 'photo/CXF08102.jpg'], 'Sports Day 2023')">
+                    <div class="activity-images">
+                        <img src="photo/Sport1.jpg" alt="Sports 1" class="activity-image active">
+                        <img src="photo/Sport2.jpg" alt="Sports 2" class="activity-image">
+                        <img src="photo/Sport3.jpg" alt="Sports 3" class="activity-image">
+                        <img src="photo/CXF08447.jpg" alt="Sports 4" class="activity-image">
+                        <img src="photo/CXF08102.jpg" alt="Sports 5" class="activity-image">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-date">2023</div>
+                        <h3 class="activity-title">Sports Day 2023</h3>
+                        <p class="activity-description">Bangkok University Annual Sports Competition</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card" onclick="openActivityGallery(['photo/Image (1).jpg', 'photo/Image (2).jpg', 'photo/Image (3).jpg', 'photo/S__13705297.jpg', 'photo/Cheer3.jpg'], 'Cheer Day 2022')">
+                    <div class="activity-images">
+                        <img src="photo/Image (1).jpg" alt="Cheer 1" class="activity-image active">
+                        <img src="photo/Image (2).jpg" alt="Cheer 2" class="activity-image">
+                        <img src="photo/Image (3).jpg" alt="Cheer 3" class="activity-image">
+                        <img src="photo/S__13705297.jpg" alt="Cheer 4" class="activity-image">
+                        <img src="photo/Cheer3.jpg" alt="Cheer 5" class="activity-image">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-date">2022</div>
+                        <h3 class="activity-title">Cheer Day 2022</h3>
+                        <p class="activity-description">Bangkok University Annual Cheerleading Day for All Faculties</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card" onclick="openActivityGallery(['photo/Open1.jpg'], 'Open House Bangkok University')">
+                    <div class="activity-images">
+                        <img src="photo/Open1.jpg" alt="Open House 1" class="activity-image active">
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-date">2022</div>
+                        <h3 class="activity-title">Open House Bangkok University</h3>
+                        <p class="activity-description">Counseling Staff for High School Students Interested in the Faculty of Information Technology and Innovation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            
+
+            
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-right">
+                    <div class="social-links-contact">
+                        <a href="https://www.linkedin.com/in/cherliya-wattanaissararat-2b27a7374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/cherliya-wattana" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/18Ax9aUD7y/" class="social-link" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:cherliya.watt@gmail.com" style="color: inherit; text-decoration: none;">cherliya.watt@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:0626293656" style="color: inherit; text-decoration: none;">062-629-3656</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Khlong Luang , Pathum Thani</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Cherliya Wattanaissararat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>ส่งข้อความเรียบร้อยแล้ว!</span>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="portt.js"></script>
+    <script>
+        let currentZoom = 1;
+        
+        function openImageModal(imageSrc, altText) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = altText;
+            modal.style.display = 'block';
+            currentZoom = 1;
+            modalImage.style.transform = `scale(${currentZoom})`;
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            currentZoom = 1;
+        }
+        
+        function zoomIn() {
+            currentZoom += 0.2;
+            if (currentZoom > 3) currentZoom = 3;
+            const modalImage = document.getElementById('modalImage');
+            modalImage.style.transform = `scale(${currentZoom})`;
+        }
+        
+        function zoomOut() {
+            currentZoom -= 0.2;
+            if (currentZoom < 0.5) currentZoom = 0.5;
+            const modalImage = document.getElementById('modalImage');
+            modalImage.style.transform = `scale(${currentZoom})`;
+        }
+        
+        function resetZoom() {
+            currentZoom = 1;
+            const modalImage = document.getElementById('modalImage');
+            modalImage.style.transform = `scale(${currentZoom})`;
+        }
+        
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+    </script>
+<script>
+        // toggleSkillCategory function is now in portt.js
+    </script>
+    </body>
+</html>
