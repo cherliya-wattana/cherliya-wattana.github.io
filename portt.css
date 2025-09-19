@@ -194,10 +194,20 @@ body::after {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 var(--spacing-md);
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background: rgba(26, 15, 31, 0.95);
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 1rem;
+    z-index: 999;
+    overflow-y: auto;
+    /* ... */
   }
-  
+}
   /* Mobile navigation improvements */
   .nav-container {
     padding: var(--spacing-sm) var(--spacing-md);
