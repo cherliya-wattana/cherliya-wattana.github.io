@@ -530,13 +530,21 @@ section::before {
   
   /* Activities responsive design */
   .activities-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
+    margin: 0 5px;
   }
   
   .activity-card {
-    min-height: 300px;
+    min-height: 250px;
     padding: var(--spacing-md);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(155, 92, 255, 0.3);
   }
   
   .activity-images {
@@ -955,6 +963,10 @@ section::before {
   margin-bottom: var(--spacing-sm);
   font-weight: 400;
   line-height: 1.2;
+}
+
+.mobile-break {
+  display: none;
 }
 
 .skill-chips {
@@ -1605,6 +1617,11 @@ section::before {
   
   .hero-subtitle {
     font-size: var(--font-size-sm);
+    line-height: 1.4;
+  }
+  
+  .mobile-break {
+    display: inline;
   }
   
   .skill-chips {
@@ -2691,6 +2708,8 @@ section::before {
   .about-image {
     max-width: 85%;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
   }
   
   .about-image img {
@@ -2698,6 +2717,16 @@ section::before {
     height: 300px;
     object-fit: cover;
     object-position: center top;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  .about-image img:hover {
+    transform: translateZ(0) scale(1.01);
+    -webkit-transform: translateZ(0) scale(1.01);
   }
   
   .small-images {
@@ -3259,26 +3288,32 @@ section::before {
   
   /* Experience responsive */
   .experience-timeline::before {
-    left: 30px;
+    display: none;
   }
   
   .experience-item {
-    flex-direction: row !important;
-    margin-left: 60px;
+    flex-direction: column !important;
+    margin: 0 auto var(--spacing-lg) auto;
+    align-items: center;
+    justify-content: center;
   }
   
   .experience-content {
     width: 100%;
-    margin-left: var(--spacing-lg);
+    margin: 0 auto;
     padding: var(--spacing-md);
+    text-align: center;
+    max-width: 400px;
   }
   
   .experience-date {
-    position: absolute;
-    left: 30px;
-    transform: translateX(-50%);
+    position: relative;
+    left: auto;
+    transform: none;
     font-size: var(--font-size-xs);
     padding: var(--spacing-xs) var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
   }
   
   .experience-date::before {
@@ -3408,16 +3443,75 @@ section::before {
   }
   
   .soft-skill-box {
-    padding: var(--spacing-sm);
-    min-height: 50px;
+    padding: var(--spacing-md);
+    min-height: 80px;
   }
   
   .activities-grid {
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
+    margin: 0;
+    grid-template-columns: 1fr;
   }
   
   .activity-card {
-    min-height: 120px;
+    min-height: 350px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Expand container and reduce margins */
+  .container {
+    max-width: 95%;
+    padding: 0 10px;
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 10px;
+  }
+}
+
+/* Skills Mobile Layout */
+@media (max-width: 768px) {
+  .skill-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    margin-top: 20px;
+  }
+  
+  .skill-item {
+    margin-bottom: 12px;
+    padding: 6px;
+  }
+  
+  .skill-info {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    text-align: center;
+  }
+  
+  .skill-info span {
+    font-size: 0.85em;
+  }
+  
+  .skill-level {
+    margin-left: 0;
+    font-size: 0.7em;
+  }
+  
+  .progress-bar::after {
+    content: attr(data-progress) "%";
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.6em;
+    font-weight: bold;
+    background: #000000;
+    padding: 1px 4px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -3948,6 +4042,45 @@ section::before {
     
     .gallery-content {
         padding: 15px;
+    }
+    
+    .zoom-controls {
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        z-index: 1002;
+    }
+    
+    .zoom-btn {
+        width: 44px;
+        height: 44px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        -webkit-tap-highlight-color: rgba(155, 92, 255, 0.3);
+        touch-action: manipulation;
+    }
+    
+    .zoom-btn:hover {
+        background: rgba(155, 92, 255, 0.9);
+        color: white;
+        transform: scale(1.1);
+    }
+    
+    .zoom-btn:active {
+        transform: scale(0.95);
     }
     
     .thumbnail {
