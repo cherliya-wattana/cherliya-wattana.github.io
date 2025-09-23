@@ -836,6 +836,11 @@ function openActivityGallery(images, title) {
         <div class="gallery-content">
             <button class="modal-close">&times;</button>
             <h3 class="gallery-title">${title}</h3>
+            <div class="zoom-controls">
+                <button class="zoom-btn zoom-in" title="Zoom In">+</button>
+                <button class="zoom-btn zoom-out" title="Zoom Out">-</button>
+                <button class="zoom-btn zoom-reset" title="Reset Zoom">⌂</button>
+            </div>
             <div class="gallery-navigation">
                 <button class="nav-btn prev-btn" ${images.length <= 1 ? 'style="display:none"' : ''}>‹</button>
                 <div class="gallery-image-container">
@@ -861,6 +866,9 @@ function openActivityGallery(images, title) {
     setTimeout(() => {
         modal.classList.add('show');
     }, 10);
+    
+    // Initialize zoom functionality for gallery
+    initializeGalleryZoom(modal);
     
     // Gallery functionality
     const galleryImage = modal.querySelector('.gallery-image');
@@ -966,6 +974,109 @@ function initializeZoom(modal) {
         translateY = 0;
         updateTransform();
     });
+    
+    // Mouse wheel zoom
+    imageContainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? 0.9 : 1.1;
+        scale = Math.min(Math.max(scale * delta, 0.5), 5);
+        updateTransform();
+    });
+    
+    // Drag to pan when zoomed
+    image.addEventListener('mousedown', (e) => {
+        if (scale > 1) {
+            isDragging = true;
+            startX = e.clientX - translateX;
+            startY = e.clientY - translateY;
+            image.style.cursor = 'grabbing';
+        }
+    });
+    
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            updateTransform();
+        }
+    });
+    
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        image.style.cursor = scale > 1 ? 'grab' : 'default';
+    });
+    
+    // Touch support for mobile
+    let initialDistance = 0;
+    let initialScale = 1;
+    
+    imageContainer.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 2) {
+            initialDistance = Math.hypot(
+                e.touches[0].clientX - e.touches[1].clientX,
+                e.touches[0].clientY - e.touches[1].clientY
+            );
+            initialScale = scale;
+        }
+    });
+    
+    imageContainer.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        if (e.touches.length === 2) {
+            const currentDistance = Math.hypot(
+                e.touches[0].clientX - e.touches[1].clientX,
+                e.touches[0].clientY - e.touches[1].clientY
+            );
+            scale = Math.min(Math.max(initialScale * (currentDistance / initialDistance), 0.5), 5);
+            updateTransform();
+        }
+    });
+}
+
+function initializeGalleryZoom(modal) {
+    const image = modal.querySelector('.gallery-image');
+    const imageContainer = modal.querySelector('.gallery-image-container');
+    const zoomInBtn = modal.querySelector('.zoom-in');
+    const zoomOutBtn = modal.querySelector('.zoom-out');
+    const zoomResetBtn = modal.querySelector('.zoom-reset');
+    
+    let scale = 1;
+    let isDragging = false;
+    let startX, startY, translateX = 0, translateY = 0;
+    
+    function updateTransform() {
+        image.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+    }
+    
+    function resetZoom() {
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        updateTransform();
+    }
+    
+    // Reset zoom when image changes
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
+                resetZoom();
+            }
+        });
+    });
+    observer.observe(image, { attributes: true });
+    
+    // Zoom controls
+    zoomInBtn.addEventListener('click', () => {
+        scale = Math.min(scale * 1.2, 5);
+        updateTransform();
+    });
+    
+    zoomOutBtn.addEventListener('click', () => {
+        scale = Math.max(scale / 1.2, 0.5);
+        updateTransform();
+    });
+    
+    zoomResetBtn.addEventListener('click', resetZoom);
     
     // Mouse wheel zoom
     imageContainer.addEventListener('wheel', (e) => {
