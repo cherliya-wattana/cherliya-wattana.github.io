@@ -57,6 +57,15 @@ function initializeNavigation() {
         });
     });
 
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') && 
+            !navMenu.contains(e.target) && 
+            !navToggle.contains(e.target)) {
+            toggleMobileMenu();
+        }
+    });
+
     // Smooth scroll for navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', handleSmoothScroll);
@@ -223,7 +232,8 @@ function initializeTypingEffect() {
     if (!typingElement) return;
 
     const texts = [
-        'CHERLIYA WATTANAISSARARAT'
+        'CHERLIYA WATTANAISSARARAT',
+        'เฌอร์ลิญา วัฒนาอิสรารัชต์'
     ];
     
     let textIndex = 0;
@@ -246,11 +256,11 @@ function initializeTypingEffect() {
 
         if (!isDeleting && charIndex === currentText.length) {
             isDeleting = true;
-            typingSpeed = 2000; // Pause before deleting
+            typingSpeed = 3000; // Pause before deleting (increased for better readability)
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             textIndex = (textIndex + 1) % texts.length;
-            typingSpeed = 500; // Pause before typing next text
+            typingSpeed = 800; // Pause before typing next text
         }
 
         setTimeout(typeText, typingSpeed);
@@ -678,50 +688,70 @@ function toggleSkillCategory(element) {
     const arrow = element.querySelector('.skill-arrow');
     const allCategories = document.querySelectorAll('.skill-category');
     
-    // Get the index of current category
-    const categoryIndex = Array.from(allCategories).indexOf(skillCategory);
+    // Check if we're on mobile (screen width <= 768px)
+    const isMobile = window.innerWidth <= 768;
     
-    // Define row groups (first row: 0,1,2; second row: 3,4,5; third row: 6)
-    let rowCategories = [];
-    if (categoryIndex >= 0 && categoryIndex <= 2) {
-        // First row: Programming, Data Analyst, Data Science
-        rowCategories = [allCategories[0], allCategories[1], allCategories[2]];
-    } else if (categoryIndex >= 3 && categoryIndex <= 5) {
-        // Second row: UX/UI, Business Analyst, Soft Skills
-        rowCategories = [allCategories[3], allCategories[4], allCategories[5]];
-    } else if (categoryIndex === 6) {
-        // Third row: Tools & Platforms (spans full width)
-        rowCategories = [allCategories[6]];
-    }
-    
-    // Check if any item in the row is currently expanded
-    const isAnyExpanded = rowCategories.some(cat => {
-        const items = cat.querySelector('.skill-items');
-        return items && items.classList.contains('expanded');
-    });
-    
-    if (isAnyExpanded) {
-        // Collapse all items in the row
-        rowCategories.forEach(cat => {
-            const items = cat.querySelector('.skill-items');
-            const catArrow = cat.querySelector('.skill-arrow');
-            if (items && catArrow) {
-                items.classList.remove('expanded');
-                items.classList.add('collapsed');
-                catArrow.classList.remove('rotated');
-            }
-        });
+    if (isMobile) {
+        // Mobile behavior: toggle only the clicked category
+        const isExpanded = skillItems && skillItems.classList.contains('expanded');
+        
+        if (isExpanded) {
+            // Collapse this category
+            skillItems.classList.remove('expanded');
+            skillItems.classList.add('collapsed');
+            if (arrow) arrow.classList.remove('rotated');
+        } else {
+            // Expand this category
+            skillItems.classList.remove('collapsed');
+            skillItems.classList.add('expanded');
+            if (arrow) arrow.classList.add('rotated');
+        }
     } else {
-        // Expand all items in the row
-        rowCategories.forEach(cat => {
+        // Desktop behavior: original row-based logic
+        const categoryIndex = Array.from(allCategories).indexOf(skillCategory);
+        
+        // Define row groups (first row: 0,1,2; second row: 3,4,5; third row: 6)
+        let rowCategories = [];
+        if (categoryIndex >= 0 && categoryIndex <= 2) {
+            // First row: Programming, Data Analyst, Data Science
+            rowCategories = [allCategories[0], allCategories[1], allCategories[2]];
+        } else if (categoryIndex >= 3 && categoryIndex <= 5) {
+            // Second row: UX/UI, Business Analyst, Soft Skills
+            rowCategories = [allCategories[3], allCategories[4], allCategories[5]];
+        } else if (categoryIndex === 6) {
+            // Third row: Tools & Platforms (spans full width)
+            rowCategories = [allCategories[6]];
+        }
+        
+        // Check if any item in the row is currently expanded
+        const isAnyExpanded = rowCategories.some(cat => {
             const items = cat.querySelector('.skill-items');
-            const catArrow = cat.querySelector('.skill-arrow');
-            if (items && catArrow) {
-                items.classList.remove('collapsed');
-                items.classList.add('expanded');
-                catArrow.classList.add('rotated');
-            }
+            return items && items.classList.contains('expanded');
         });
+        
+        if (isAnyExpanded) {
+            // Collapse all items in the row
+            rowCategories.forEach(cat => {
+                const items = cat.querySelector('.skill-items');
+                const catArrow = cat.querySelector('.skill-arrow');
+                if (items && catArrow) {
+                    items.classList.remove('expanded');
+                    items.classList.add('collapsed');
+                    catArrow.classList.remove('rotated');
+                }
+            });
+        } else {
+            // Expand all items in the row
+            rowCategories.forEach(cat => {
+                const items = cat.querySelector('.skill-items');
+                const catArrow = cat.querySelector('.skill-arrow');
+                if (items && catArrow) {
+                    items.classList.remove('collapsed');
+                    items.classList.add('expanded');
+                    catArrow.classList.add('rotated');
+                }
+            });
+        }
     }
 }
 
