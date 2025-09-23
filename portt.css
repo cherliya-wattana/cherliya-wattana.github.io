@@ -1603,6 +1603,50 @@ section::before {
     min-width: 400px;
     max-width: 500px;
   }
+  
+  /* Progress bars for iPad */
+  .skill-level {
+    color: #00ccff !important;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-left: auto;
+  }
+  
+  .skill-progress {
+    background: rgba(185, 182, 201, 0.1);
+    border-radius: var(--radius-full);
+    height: 8px;
+    overflow: visible;
+    position: relative;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: #00ccff;
+    border-radius: var(--radius-full);
+    width: 0;
+    transition: width 1s ease-in-out;
+    position: relative;
+  }
+  
+  .progress-bar::after {
+    content: attr(data-progress) "%";
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+    background: #000000;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .tools-platforms .progress-bar {
+    background: #9b5cff !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2834,6 +2878,50 @@ section::before {
   
   .education-card {
     padding: 4px;
+  }
+  
+  /* Progress bars for larger tablets */
+  .skill-level {
+    color: #00ccff !important;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-left: auto;
+  }
+  
+  .skill-progress {
+    background: rgba(185, 182, 201, 0.1);
+    border-radius: var(--radius-full);
+    height: 8px;
+    overflow: visible;
+    position: relative;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: #00ccff;
+    border-radius: var(--radius-full);
+    width: 0;
+    transition: width 1s ease-in-out;
+    position: relative;
+  }
+  
+  .progress-bar::after {
+    content: attr(data-progress) "%";
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+    background: #000000;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .tools-platforms .progress-bar {
+    background: #9b5cff !important;
   }
 }
 
