@@ -214,11 +214,14 @@ function initializeSkillBars() {
 }
 
 function animateSkillBars() {
-    progressBars.forEach(bar => {
+    console.log('Animating skill bars, found:', progressBars.length, 'bars');
+    progressBars.forEach((bar, index) => {
         const skillLevel = bar.getAttribute('data-progress') || 70;
+        console.log(`Bar ${index}: data-progress=${skillLevel}`);
         
         setTimeout(() => {
             bar.style.width = skillLevel + '%';
+            console.log(`Bar ${index}: set width to ${skillLevel}%`);
         }, 200);
     });
 }
