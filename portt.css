@@ -1690,6 +1690,8 @@ section::before {
   .skill-chips {
     justify-content: center;
     gap: var(--spacing-md);
+    margin-left: var(--spacing-md);
+    margin-right: var(--spacing-md);
   }
   
   .skill-chip {
@@ -2719,10 +2721,10 @@ section::before {
   }
   
   .certifications-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-xs);
-    padding: 0 var(--spacing-xs);
-  }
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+        padding: 0;
+    }
   
   .skills-content {
     grid-template-columns: 1fr;
@@ -2739,9 +2741,9 @@ section::before {
   }
   
   .certification-card {
-    padding: var(--spacing-sm);
-    min-height: 160px;
-    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+    min-height: 200px;
+    gap: var(--spacing-sm);
     margin: 0;
   }
   
