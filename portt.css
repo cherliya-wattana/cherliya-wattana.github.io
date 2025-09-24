@@ -2724,6 +2724,7 @@ section::before {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-sm);
         padding: 0;
+        justify-items: center;
     }
   
   .skills-content {
