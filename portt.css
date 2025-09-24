@@ -997,9 +997,9 @@ section::before {
 .skill-chip:nth-child(1) { --i: 0; }
 .skill-chip:nth-child(2) { --i: 1; }
 .skill-chip:nth-child(3) { --i: 2; }
-.skill-chip:nth-child(4) { --i: 3; }
-.skill-chip:nth-child(5) { --i: 4; }
-.skill-chip:nth-child(6) { --i: 5; }
+.skill-chip:nth-child(4) { --i: 0; }
+.skill-chip:nth-child(5) { --i: 1; }
+.skill-chip:nth-child(6) { --i: 2; }
 
 .skill-chip::before {
   content: '';
